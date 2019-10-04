@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap&subset=cyrillic-ext");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800&display=swap&subset=cyrillic-ext');
 
 body {
   --maincolor: #f34213;
-  --subcolor001: #58355e;
+  --subcolor001: #484041;
   --subcolor002: #f18701;
+  --white: #ffffffe0;
+  --light-grey: #e6e6e6;
   font-family: "Didact Gothic", sans-serif;
   font-size: 16px;
   margin: 0;
@@ -14,6 +17,22 @@ a {
   color: inherit;
   font-size: inherit;
   text-decoration: none;
+}
+
+
+.fl-r {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fl-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* align-content: center; */
+  align-items: center;
 }
 
 .container {
@@ -73,11 +92,35 @@ a {
 }
 
 #showcase {
-  display: flex;
   background-image: url(../images/AdobeStock_230714251-1920x721.jpeg);
   background-position-x: center;
   background-position-y: top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#showcase-finder{
+  width: 100%;
+  height: 70vh;
+  background-color: var(--white);
+  border-radius: 10px;
+  margin-top: -10rem;
+  z-index: 100;
+  border: 1px solid var(--light-grey);
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
+
+h1 {
+  display: block;
+  width: 100%;
+  font-size: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  margin: 3.5rem;
+  text-transform: uppercase;
+  color: var(--subcolor001);
+  text-align: center;
 }
